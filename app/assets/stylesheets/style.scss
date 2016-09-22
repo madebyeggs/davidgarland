@@ -7,8 +7,8 @@
 .carousel, .carousel2 {position:absolute;top:0;right:92px;}
 .carousel, .carousel2 {width:1265px;z-index:10;}
 .container-fluid{padding-left:0px;}
-.navbar-nav h1 {margin:-2px 40px 0px 0px;}
-.navbar-nav li {font-size:18px;margin-left:20px;}
+.navbar-nav {z-index:1000;}
+.navbar-nav li {font-size:18px;margin-left:50px;}
 .navbar-nav li:nth-child(1) {margin-left:0px;}
 .navbar-nav li a {color:#7c2c0a;}
 .navbar-nav > li > h1 > a:hover{text-decoration:none;}
@@ -27,5 +27,7 @@
 .logo {position:absolute;bottom:114px;left:154px;z-index:20;}
 .logo img {max-width:92%;}
 .logo h1 a {text-decoration:none;font-family:"ITC Avant Garde Gothic Pro";font-size:80px;color:#7c2c0a;text-transform:uppercase;font-weight:580;line-height:60px}
+.page-header {position:absolute;bottom:77px;right:170px;}
+.pipe {margin-top:10px;}
 
 
