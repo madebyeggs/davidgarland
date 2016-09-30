@@ -4,10 +4,6 @@ class DomesticwaresController < ApplicationController
   def new
     @domesticware = Domesticware.new
   end
-  
-  def index
-    define_models
-  end
 
   def create
     @domesticware = Domesticware.create(domesticware_params)
@@ -24,7 +20,7 @@ class DomesticwaresController < ApplicationController
     @domesticware = Domesticware.find(params[:id])
     if @domesticware.update_attributes(domesticware_params)
       respond_to do |format|
-       format.html { redirect_to get_domestic_ware_path }
+       format.html { redirect_to cms_path }
        format.json { render :json => @domesticware }
       end
     else
@@ -39,7 +35,7 @@ class DomesticwaresController < ApplicationController
     @domesticware = Domesticware.find(params[:id])
     @domesticware.destroy
     respond_to do |format|
-      format.html { redirect_to root_path }
+      format.html { redirect_to cms_path }
     end
   end
   

@@ -7,16 +7,16 @@
 			<%= @domesticware.description2 %>
 		</div>
 	</div>
+	<% if user_signed_in? %>
+		<div class="thumbnail col-md-3">
+			<%= link_to(image_tag('add.png'), new_domesticware_path) %>
+		</div>
+	<% end %>
 </div>
 <div class="col-md-5 clearSpace" id="thumbs">
 	<% @domesticwares.each do |dw| %>
 		<div class="thumbnail col-md-3">
 			<%= image_tag(dw.image, :alt => "#{dw.description1} <br/> #{dw.description2}") %>
-		</div>
-	<% end %>
-	<% if user_signed_in? %>
-		<div class="thumbnail col-md-3">
-			<%= link_to(image_tag('add.png'), new_domesticware_path) %>
 		</div>
 	<% end %>
 </div>

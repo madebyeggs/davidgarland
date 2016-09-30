@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :works
   resources :contacts
   resources :domesticwares
+  resources :cms
   
 
   # The priority is based upon order of creation: first created -> highest priority.
