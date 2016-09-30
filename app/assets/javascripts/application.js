@@ -12,13 +12,18 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require jquery
 //= require bootstrap-sprockets
-//= require_tree .
-
+//= require nprogress
+//= require nprogress-turbolinks
+//= require turbolinks
 
 $(document).on('turbolinks:load', function() {
+	
+	$('#thumbs').delegate('img','click', function(){
+	    $('#largeImage').attr('src',$(this).attr('src').replace('thumb','large'));
+	    $('#description').html($(this).attr('alt'));
+	});
+	
 	(function ( window, document, undefined ) {
 
 	  /*

@@ -1,7 +1,19 @@
 Rails.application.routes.draw do
   
   root :to => 'home#index'
+  
+  get "works/studio_ceramics" => "works#studio_ceramics", :as => :get_studio_ceramics
+  get "works/domestic_ware" => "works#domestic_ware", :as => :get_domestic_ware
+  
+  match '/contacts',     to: 'contacts#new',             via: 'get'
+  resources "contacts", only: [:new, :create]
+  
   resources :abouts
+  resources :works
+  resources :contacts
+  resources :domestic_wares
+  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

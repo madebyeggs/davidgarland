@@ -3,4 +3,7 @@ $body-bg:#ffffff!default;
 $red:#7c2c0a !default;
 $text-color:$red !default;
 @import "bootstrap";
-@import "style"
+@import "style";
+@import "media_queries";
+@import "nprogress";
+@import "nprogress-bootstrap";

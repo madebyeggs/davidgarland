@@ -1,17 +1,19 @@
 <div class="page-header">
  	<div class="container-fluid">
-      <ul class="nav navbar-nav">
-	    <li><h1><%= link_to 'David Garland', root_path %></h1></li>
-        <li class="active"><%= link_to 'About', abouts_path %></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Work <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Studio Ceramics</a></li>
-            <li><a href="#">Domestic Ware</a></li>
-          </ul>
-        </li>
-		<li><a href="#">Contact</a></li>
-      </ul>
+		<h1><%= link_to 'David Garland', root_path %></h1>
+      	<ul class="nav navbar-nav" id="menu">
+        	<li class="active"><%= link_to 'About', abouts_path %></li>
+        	<li class="dropdown">
+          		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" 
+				aria-expanded="false">Work <span class="caret"></span></a>
+          		<ul class="dropdown-menu">
+            		<li><%= link_to 'Studio Ceramics', get_studio_ceramics_path %></li>
+            		<li><%= link_to 'Domestic Ware', get_domestic_ware_path %></li>
+					<li><%= link_to 'In Situ', root_path %></li>
+          		</ul>
+        	</li>
+			<li><%= link_to 'Contact', contacts_path %></li>
+      	</ul>
     </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
 

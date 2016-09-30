@@ -6,12 +6,23 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-	<div class="bgImage"><%= image_tag('bg.png') %></div>
-	<div class="container theme-showcase" role="main">
-		<%= render 'layouts/header' %>
-		<%= yield %>
-	</div>
 
-</body>
+<% if controller_name == "home" %>
+	<body class="homeImage" data-ride=""><div class="bgImage1"><%= image_tag('sides.png') %></div>
+		<div class="bgImage2"><%= image_tag('shapes.png') %></div>
+		<div class="container theme-showcase" role="main">
+			<%= render 'layouts/header' %>
+			<%= yield %>
+		</div>
+	</body>
+<% else %>
+	<body>
+		<div class="bgImage1"><%= image_tag('sides.png') %></div>
+		<div class="bgImage2"><%= image_tag('shapes.png') %></div>
+		<div class="container theme-showcase" role="main">
+			<%= render 'layouts/header' %>
+			<%= yield %>
+		</div>
+	</body>
+<% end %>
 </html>

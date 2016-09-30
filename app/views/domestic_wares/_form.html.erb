@@ -1,0 +1,9 @@
+<div class="col-md-12">
+	<h2 class="titles">Add your Domestic Ware piece here!</h2>
+	<%= bootstrap_form_for(@domesticWare) do |f| %>
+	  	<%= f.text_field :description1, label: "Description1" %>
+		<%= f.text_field :description2, label: "Description2" %>
+		<%= f.file_field :image %>
+	  	<%= f.submit 'Submit', class: "btn btn-success"  %>
+	<% end %>
+</div>

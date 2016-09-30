@@ -1,0 +1,2 @@
+module DomesticWaresHelper
+end

@@ -1,0 +1,21 @@
+<div class="marginTop">
+	<div class="col-md-7 clearSpace">
+		<div class="item">
+		  <img src="../assets/contact2.jpg" alt="Second slide" data-holder-rendered="true">
+		</div>
+	</div>
+	<div class="col-md-1">&nbsp;</div>
+	<div class="col-md-4 clearSpace">
+		  <h3>We'd love to hear from you, please do get in touch</h3>
+
+		  <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
+		    <%= f.input :name, :required => true %>
+		    <%= f.input :email, :required => true %>
+		    <%= f.input :message, :as => :text, :required => true %>
+		    <div>
+		      </br>
+		      <%= f.button :submit, 'Send message', :class=> "btn btn-primary" %>
+		    </div>
+		  <% end %>
+	</div>
+</div>
