@@ -11,6 +11,7 @@
 	 	</thead>
 	 	<tbody>
 	   		<% @domesticwares.each do |dw| %>
+				<tr data-item-id=<%= "#{dw.id}" %> class="item">
 	    		<tr>
 					<td width="10%"><%= dw.id %></td>
 					<td class="thumbTiny" width="10%"><%= image_tag(dw.image) %></td>

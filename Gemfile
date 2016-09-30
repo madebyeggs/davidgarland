@@ -17,6 +17,8 @@ gem 'bootstrap_form'
 gem "paperclip", "~> 5.0.0"
 gem 'aws-sdk', '~> 2.3'
 gem 'devise'
+gem 'ranked-model'
+gem 'jquery-ui-rails'
 
 group :development, :test do
   gem 'byebug'

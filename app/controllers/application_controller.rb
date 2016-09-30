@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   
   def define_models
-    @domesticwares = Domesticware.all
+    @domesticwares = Domesticware.rank(:row_order).all
     @domesticware = Domesticware.first
   end
 end
