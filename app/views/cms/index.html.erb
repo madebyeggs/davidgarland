@@ -65,12 +65,12 @@
 	   		</tr>
 	 	</thead>
 	 	<tbody>
-	   		<% @insitu.each do |is| %>
+	   		<% @insitus.each do |is| %>
 				<tr data-item-id=<%= "#{is.id}" %> class="item">
 	    		<tr>
-					<td width="40%"><%= sc.id %></td>
+					<td width="10%"><%= is.id %></td>
 					<td class="thumbTiny" width="10%"><%= image_tag(is.image) %></td>
-					<td width="50%">
+					<td width="80%">
 						<%= link_to 'Edit', edit_insitu_path(is), class: "btn btn-success" %>
 						<%= link_to 'Delete', is, method: :delete, data: {confirm: "Are you sure you want to delete this record?"}, class: "btn btn-success" %>
 					</td>
