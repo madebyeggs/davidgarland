@@ -1,23 +1,26 @@
 <div class="marginTop">
-<div class="col-md-8 clearSpace aboutPad2 largeImage">
-	<div class="item thumbnail" id="panel">
-	  	<img id="largeImage" src="<%= @studioceramic.image %>" data-holder-rendered="true"><br/>
-		<div id="description">
-			<%= @studioceramic.description1 %><br/>
-			<%= @studioceramic.description2 %>
+	<div class="col-md-8 clearSpace aboutPad2 largeImage">
+		<div class="item thumbnail" id="panel">
+		  	<img id="largeImage" src="<%= @studioceramic.image %>" data-holder-rendered="true"><br/>
+			<div id="description">
+				<%= @studioceramic.description1 %><br/>
+				<%= @studioceramic.description2 %>
+			</div>
 		</div>
 	</div>
-</div>
-<div class="col-md-4 clearSpace" id="thumbs">
-	<% @studioceramics.each do |sc| %>
-		<div class="thumbnail col-md-3">
-			<%= image_tag(sc.image, :alt => "#{sc.description1} <br/> #{sc.description2}") %>
-			<div class="number"><%= sc.id %></div>
-		</div>
-	<% end %>
-	<% if user_signed_in? %>
-		<div class="thumbnail col-md-3">
-			<%= link_to(image_tag('add.png'), new_studioceramic_path) %>
-		</div>
-	<% end %>
+	<div class="col-md-4 clearSpace" id="thumbs">
+		<% @studioceramics.each do |sc| %>
+			<div class="thumbnail col-md-3">
+				<%= image_tag(sc.image, :alt => "#{sc.description1} <br/> #{sc.description2}") %>
+				<div class="number"><%= sc.id %></div>
+			</div>
+		<% end %>
+		<% if user_signed_in? %>
+			<div class="thumbnail col-md-3">
+				<%= link_to(image_tag('add.png'), new_studioceramic_path) %>
+			</div>
+		<% end %>
+	</div>
+	<div class="col-md-8">&nbsp;</div>
+	<div class="col-md-4 end"><h2>Studio Ceramics</h2></div>
 </div>

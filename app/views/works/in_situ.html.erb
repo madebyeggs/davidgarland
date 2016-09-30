@@ -1,18 +1,21 @@
 <div class="marginTop">
-<div class="col-md-8 clearSpace aboutPad2 largeImage">
-	<div class="item thumbnail" id="panel">
-	  	<img id="largeImage" src="<%= @insitu.image %>" data-holder-rendered="true"><br/>
+	<div class="col-md-8 clearSpace aboutPad2 largeImage">
+		<div class="item thumbnail" id="panel">
+		  	<img id="largeImage" src="<%= @insitu.image %>" data-holder-rendered="true"><br/>
+		</div>
 	</div>
-</div>
-<div class="col-md-4 clearSpace" id="thumbs">
-	<% @insitus.each do |is| %>
-		<div class="thumbnail col-md-3">
-			<%= image_tag(is.image) %>
-		</div>
-	<% end %>
-	<% if user_signed_in? %>
-		<div class="thumbnail col-md-3">
-			<%= link_to(image_tag('add.png'), new_insitu_path) %>
-		</div>
-	<% end %>
+	<div class="col-md-4 clearSpace" id="thumbs">
+		<% @insitus.each do |is| %>
+			<div class="thumbnail col-md-3">
+				<%= image_tag(is.image) %>
+			</div>
+		<% end %>
+		<% if user_signed_in? %>
+			<div class="thumbnail col-md-3">
+				<%= link_to(image_tag('add.png'), new_insitu_path) %>
+			</div>
+		<% end %>
+	</div>
+	<div class="col-md-8">&nbsp;</div>
+	<div class="col-md-4 end2"><h2>In Situ</h2></div>
 </div>
