@@ -1,0 +1,2 @@
+module StudioceramicsHelper
+end

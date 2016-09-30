@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :works
   resources :contacts
   resources :domesticwares
+  resources :studioceramics
   resources :cms
   
 

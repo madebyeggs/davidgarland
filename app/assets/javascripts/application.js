@@ -14,12 +14,8 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require turbolinks
-//= require jquery.turbolinks
 //= require nprogress
 //= require nprogress-turbolinks
-//= require update_domesticwares_row_order
-//= require jquery-ui/sortable
-//= require jquery-ui/effect-highlight
 
 $(document).on('turbolinks:load', function() {
 	

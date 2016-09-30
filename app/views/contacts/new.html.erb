@@ -1,21 +1,8 @@
 <div class="marginTop">
-	<div class="col-md-7 clearSpace">
+	<div class="col-md-12 clearSpace">
 		<div class="item">
 			<%= image_tag('contact2.jpg') %>
 		</div>
 	</div>
-	<div class="col-md-1">&nbsp;</div>
-	<div class="col-md-4 clearSpace">
-		  <h3>We'd love to hear from you, please do get in touch</h3>
-
-		  <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
-		    <%= f.input :name, :required => true %>
-		    <%= f.input :email, :required => true %>
-		    <%= f.input :message, :as => :text, :required => true %>
-		    <div>
-		      </br>
-		      <%= f.button :submit, 'Send message', :class=> "btn btn-primary" %>
-		    </div>
-		  <% end %>
-	</div>
+	<div class="col-md-1"><h3><a href="somelinkhere">sdgarland(at)btinternet(dot)com</a></h3>
 </div>
