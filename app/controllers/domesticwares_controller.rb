@@ -39,6 +39,8 @@ class DomesticwaresController < ApplicationController
     end
   end
 
+  private
+  
   def domesticware_params
     params.require(:domesticware).permit(:description1, :description2, :image)
   end
