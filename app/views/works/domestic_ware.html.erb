@@ -1,22 +1,22 @@
 <div class="marginTop">
 <div class="col-md-7 clearSpace aboutPad2">
 	<div class="item thumbnail" id="panel">
-	  	<img id="largeImage" src="<%= @domestic_ware.image %>" data-holder-rendered="true"><br/>
+	  	<img id="largeImage" src="<%= @domesticware.image %>" data-holder-rendered="true"><br/>
 		<div id="description">
-			<%= @domestic_ware.description1 %><br/>
-			<%= @domestic_ware.description2 %>
+			<%= @domesticware.description1 %><br/>
+			<%= @domesticware.description2 %>
 		</div>
 	</div>
 </div>
 <div class="col-md-5 clearSpace" id="thumbs">
-	<% @domestic_wares.each do |dw| %>
+	<% @domesticwares.each do |dw| %>
 		<div class="thumbnail col-md-3">
 			<%= image_tag(dw.image, :alt => "#{dw.description1} <br/> #{dw.description2}") %>
 		</div>
 	<% end %>
 	<% if user_signed_in? %>
 		<div class="thumbnail col-md-3">
-			<%= link_to(image_tag('add.png'), new_domestic_ware_path) %>
+			<%= link_to(image_tag('add.png'), new_domesticware_path) %>
 		</div>
 	<% end %>
 </div>

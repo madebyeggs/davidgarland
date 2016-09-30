@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   
   def define_models
-    @domestic_wares = DomesticWare.all
-    @domestic_ware = DomesticWare.first
+    @domesticwares = Domesticware.all
+    @domesticware = Domesticware.first
   end
 end

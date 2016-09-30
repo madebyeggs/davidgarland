@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class DomesticWareTest < ActiveSupport::TestCase
+class DomesticwareTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
