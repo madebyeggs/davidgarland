@@ -1,0 +1,7 @@
+<div class="col-md-12">
+	<h2 class="titles">Add your In Situ photo here!</h2>
+	<%= bootstrap_form_for(@insitu) do |f| %>
+		<%= f.file_field :image %>
+	  	<%= f.submit 'Submit', class: "btn btn-success"  %>
+	<% end %>
+</div>

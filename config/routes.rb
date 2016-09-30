@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   
   get "works/studio_ceramics" => "works#studio_ceramics", :as => :get_studio_ceramics
   get "works/domestic_ware" => "works#domestic_ware", :as => :get_domestic_ware
+  get "works/in_situ" => "works#in_situ", :as => :get_in_situ
   
   match '/contacts',     to: 'contacts#new',             via: 'get'
   resources "contacts", only: [:new, :create]
@@ -14,6 +15,7 @@ Rails.application.routes.draw do
   resources :contacts
   resources :domesticwares
   resources :studioceramics
+  resources :insitus
   resources :cms
   
 

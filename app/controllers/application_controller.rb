@@ -8,5 +8,7 @@ class ApplicationController < ActionController::Base
     @domesticware = Domesticware.first
     @studioceramics = Studioceramic.all
     @studioceramic = Studioceramic.first
+    @insitus = Insitu.all
+    @insitu = Insitu.first
   end
 end

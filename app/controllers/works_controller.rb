@@ -8,6 +8,10 @@ class WorksController < ApplicationController
     define_models
   end
   
+  def in_situ
+    define_models
+  end
+  
   def show
     define_models
   end
