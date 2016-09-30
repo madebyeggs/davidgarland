@@ -15,6 +15,7 @@ gem 'mail_form'
 gem 'simple_form'
 gem 'bootstrap_form'
 gem "paperclip", "~> 5.0.0"
+gem 'aws-sdk', '~> 2.3'
 
 group :development, :test do
   gem 'byebug'

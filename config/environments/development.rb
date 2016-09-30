@@ -38,4 +38,9 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+  
+  IMAGE_PAPERCLIP_STORAGE_OPTS = {
+    :styles => {:main => '1200X'},
+    :convert_options => { :all => '-quality 60' }
+  }
 end
