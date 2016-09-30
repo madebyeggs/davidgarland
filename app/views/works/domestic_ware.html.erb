@@ -1,23 +1,25 @@
 <div class="marginTop">
-<div class="col-md-8 clearSpace aboutPad2 largeImage">
-	<div class="item thumbnail" id="panel">
-	  	<img id="largeImage" src="<%= @domesticware.image %>" data-holder-rendered="true"><br/>
-		<div id="description">
-			<%= @domesticware.description1 %><br/>
-			<%= @domesticware.description2 %>
+	<div class="col-md-8 clearSpace aboutPad2 largeImage">
+		<div class="item thumbnail" id="panel">
+		  	<img id="largeImage" src="<%= @domesticware.image %>" data-holder-rendered="true"><br/>
+			<div id="description">
+				<%= @domesticware.description1 %><br/>
+				<%= @domesticware.description2 %>
+			</div>
 		</div>
 	</div>
-</div>
-<div class="col-md-4 clearSpace" id="thumbs">
-	<% @domesticwares.each do |dw| %>
-		<div class="thumbnail col-md-3">
-			<%= image_tag(dw.image, :alt => "#{dw.description1} <br/> #{dw.description2}") %>
-			<div class="number"><%= dw.id %></div>
-		</div>
-	<% end %>
-	<% if user_signed_in? %>
-		<div class="thumbnail col-md-3">
-			<%= link_to(image_tag('add.png'), new_domesticware_path) %>
-		</div>
-	<% end %>
+	<div class="col-md-4 clearSpace" id="thumbs">
+		<% @domesticwares.each do |dw| %>
+			<div class="thumbnail col-md-3">
+				<%= image_tag(dw.image, :alt => "#{dw.description1} <br/> #{dw.description2}") %>
+				<div class="number"><%= dw.id %></div>
+			</div>
+		<% end %>
+		<% if user_signed_in? %>
+			<div class="thumbnail col-md-3">
+				<%= link_to(image_tag('add.png'), new_domesticware_path) %>
+			</div>
+		<% end %>
+		<h2>Domestic Ware</h2>
+	</div>
 </div>
