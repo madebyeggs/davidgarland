@@ -77,6 +77,8 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   
+  config.action_mailer.default_url_options = { host: 'davidgarland.co.uk' }
+  
   # config/environments/production.rb
   config.paperclip_defaults = {
     :storage => :s3,

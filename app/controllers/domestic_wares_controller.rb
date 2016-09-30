@@ -1,5 +1,5 @@
 class DomesticWaresController < ApplicationController
-  #before_action :authenticate_user!, :except => ["index", "show"]
+  before_action :authenticate_user!
   
     def new
       @domesticWare = DomesticWare.new
@@ -8,7 +8,7 @@ class DomesticWaresController < ApplicationController
     def create
       @domesticWare = DomesticWare.create(domesticWare_params)
       respond_to do |format|
-        format.html { redirect_to root_path }
+        format.html { redirect_to get_domestic_ware_path }
       end
     end
 
@@ -20,7 +20,7 @@ class DomesticWaresController < ApplicationController
       @domesticWare = DomesticWare.find(params[:id])
       if @domesticWare.update_attributes(domesticWare_params)
         respond_to do |format|
-         format.html { redirect_to root_path }
+         format.html { redirect_to get_domestic_ware_path }
          format.json { render :json => @domesticWare }
         end
       else
