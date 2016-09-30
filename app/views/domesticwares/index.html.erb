@@ -1,0 +1,27 @@
+<div class="col-md-10l">
+	<h2>Domestic Wares</h2>
+	<table class="table table-striped" id="sortableDomesticware">
+		<thead>
+	   		<tr>
+	     		<th>ID</th>
+	     		<th>Description</th>
+				<th>Dimensions</th>
+				<th></th>
+	   		</tr>
+	 	</thead>
+	 	<tbody>
+	   		<% @domesticwares.each do |dw| %>
+	    		<tr>
+					<td width="10%"><%= dw.id %></td>
+					<td class="thumbTiny" width="10%"><%= image_tag(dw.image) %></td>
+					<td width="35%"><%= dw.description1 %></td>
+					<td width="15%"><%= dw.description2 %></td>
+					<td width="30%">
+						<%= link_to 'Edit', edit_domesticware_path(dw), class: "btn btn-success" %>
+						<%= link_to 'Delete', dw, method: :delete, data: {confirm: "Are you sure you want to delete this record?"}, class: "btn btn-success" %>
+					</td>
+	     		</tr>
+	   		<% end %>
+	 	</tbody>
+	</table>
+</div>

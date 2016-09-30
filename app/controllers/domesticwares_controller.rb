@@ -4,6 +4,10 @@ class DomesticwaresController < ApplicationController
   def new
     @domesticware = Domesticware.new
   end
+  
+  def index
+    define_models
+  end
 
   def create
     @domesticware = Domesticware.create(domesticware_params)
