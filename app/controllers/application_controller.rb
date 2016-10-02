@@ -5,7 +5,8 @@ class ApplicationController < ActionController::Base
   
   def define_models
     @domesticwares = Domesticware.all
-    @domesticware = Domesticware.first
+    @domesticwaresdisplay = Domesticware.order("id ASC")
+    @domesticwaredisplay = Domesticware.first
     @studioceramics = Studioceramic.all
     @studioceramic = Studioceramic.first
     @insitus = Insitu.all
