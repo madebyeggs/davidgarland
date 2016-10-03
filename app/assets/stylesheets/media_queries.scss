@@ -1,3 +1,7 @@
+.slicknav_menu {
+	display:none;
+}
+
 @media (max-width: 1320px) {
   	.container {width:80%;}
 }
@@ -15,6 +19,7 @@
   	.navbar-nav h1 {margin:-2px 40px 0px 12px;}
 	.container {width:95%;}
 	#menu {display:none;}
+	.slicknav_menu {display:block;}
 	.container-fluid h1 {font-size:28px;}
 	.nav > li > a.dropdown-toggle{display:none;}
 	.homeImage { 

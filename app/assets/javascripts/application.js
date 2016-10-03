@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
+//= require jquery.slicknav
 //= require turbolinks
 //= require nprogress
 //= require nprogress-turbolinks
@@ -23,6 +24,8 @@ $(document).on('turbolinks:load', function() {
 	    $('#largeImage').attr('src',$(this).attr('src').replace('thumb','large'));
 	    $('#description').html($(this).attr('alt'));
 	});
+	
+	$('#menu').slicknav();
 	
 	(function ( window, document, undefined ) {
 
