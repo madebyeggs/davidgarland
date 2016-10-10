@@ -11,7 +11,7 @@
 	<div class="col-md-4 clearSpace" id="thumbs">
 		<% @domesticwaresdisplay.each do |dw| %>
 			<div class="thumbnail col-md-3">
-				<%= image_tag(dw.image, :alt => "#{dw.description1} <br/> #{dw.description2}") %>
+				<%= image_tag(dw.image, :alt => "#{dw.description1} <br/> #{dw.description2}", lazy: true, class: "lazy") %>
 				<div class="number"><%= dw.id %></div>
 			</div>
 		<% end %>

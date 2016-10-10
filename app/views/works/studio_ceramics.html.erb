@@ -11,7 +11,7 @@
 	<div class="col-md-4 clearSpace" id="thumbs">
 		<% @studioceramicsdisplay.each do |sc| %>
 			<div class="thumbnail col-md-3">
-				<%= image_tag(sc.image, :alt => "#{sc.description1} <br/> #{sc.description2}") %>
+				<%= image_tag(sc.image, :alt => "#{sc.description1} <br/> #{sc.description2}", lazy: true, class: "lazy") %>
 				<div class="number"><%= sc.id %></div>
 			</div>
 		<% end %>

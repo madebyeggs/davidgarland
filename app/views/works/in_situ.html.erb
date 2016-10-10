@@ -7,7 +7,7 @@
 	<div class="col-md-4 clearSpace" id="thumbs">
 		<% @insitusdisplay.each do |is| %>
 			<div class="thumbnail col-md-3">
-				<%= image_tag(is.image) %>
+				<%= image_tag(is.image, lazy: true, class: "lazy") %>
 			</div>
 		<% end %>
 		<% if user_signed_in? %>

@@ -17,8 +17,14 @@
 //= require turbolinks
 //= require nprogress
 //= require nprogress-turbolinks
+//= require lazy
 
 $(document).on('turbolinks:load', function() {
+	
+	$(".lazy").lazyload({
+		effect : "fadeIn",
+		threshold : 400
+	});
 	
 	$('#thumbs').delegate('img','click', function(){
 	    $('#largeImage').attr('src',$(this).attr('src').replace('thumb','large'));
