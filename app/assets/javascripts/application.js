@@ -15,8 +15,6 @@
 //= require bootstrap-sprockets
 //= require jquery.slicknav
 //= require turbolinks
-//= require nprogress
-//= require nprogress-turbolinks
 //= require lazy
 
 $(document).on('turbolinks:load', function() {
