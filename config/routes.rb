@@ -13,7 +13,9 @@ Rails.application.routes.draw do
   resources :abouts
   resources :works
   resources :contacts
-  resources :domesticwares
+  resources :domesticwares do
+    post :update_row_order, on: :collection
+  end
   resources :studioceramics
   resources :insitus
   resources :cms

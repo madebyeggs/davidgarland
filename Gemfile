@@ -16,6 +16,8 @@ gem 'aws-sdk', '~> 2.3'
 gem 'devise'
 gem "lazyload-rails"
 gem 'turbolinks', '~> 5.0.0'
+gem 'ranked-model'
+gem 'jquery-ui-rails'
 
 group :development, :test do
   gem 'byebug'

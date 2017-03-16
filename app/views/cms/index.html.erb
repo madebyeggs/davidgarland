@@ -1,10 +1,10 @@
-<div class="col-md-10l">
-	<h2>Domestic Wares</h2><br/>
-	<table class="table table-striped" id="sortableDomesticware">
+<div class="col-md-12">
+	<h2>Domestic Ware</h2><br/>
+	<table class="table table-bordered table-striped" id="sortable">
 		<thead>
 	   		<tr>
 	     		<th>ID</th>
-				<th>Image</th>
+	     		<th>Image</th>
 	     		<th>Description</th>
 				<th>Dimensions</th>
 				<th></th>
@@ -14,65 +14,13 @@
 	   		<% @domesticwares.each do |dw| %>
 				<tr data-item-id=<%= "#{dw.id}" %> class="item">
 	    		<tr>
-					<td width="10%"><%= dw.id %></td>
-					<td class="thumbTiny" width="10%"><%= image_tag(dw.image) %></td>
-					<td width="35%"><%= dw.description1 %></td>
-					<td width="15%"><%= dw.description2 %></td>
-					<td width="30%">
-						<%= link_to 'Edit', edit_domesticware_path(dw), class: "btn btn-success" %>
-						<%= link_to 'Delete', dw, method: :delete, data: {confirm: "Are you sure you want to delete this record?"}, class: "btn btn-success" %>
-					</td>
-	     		</tr>
-	   		<% end %>
-	 	</tbody>
-	</table>
-	<br/><br/>
-	<h2>Studio Ceramics</h2><br/>
-	<table class="table table-striped" id="sortableDomesticware">
-		<thead>
-	   		<tr>
-	     		<th>ID</th>
-	     		<th>Image</th>
-	     		<th>Description</th>
-				<th>Dimensions</th>
-				<th></th>
-	   		</tr>
-	 	</thead>
-	 	<tbody>
-	   		<% @studioceramics.each do |sc| %>
-				<tr data-item-id=<%= "#{sc.id}" %> class="item">
-	    		<tr>
-					<td width="10%"><%= sc.id %></td>
-					<td class="thumbTiny" width="10%"><%= image_tag(sc.image) %></td>
-					<td width="35%"><%= sc.description1 %></td>
-					<td width="15%"><%= sc.description2 %></td>
-					<td width="30%">
-						<%= link_to 'Edit', edit_studioceramic_path(sc), class: "btn btn-success" %>
-						<%= link_to 'Delete', sc, method: :delete, data: {confirm: "Are you sure you want to delete this record?"}, class: "btn btn-success" %>
-					</td>
-	     		</tr>
-	   		<% end %>
-	 	</tbody>
-	</table>
-	<br/><br/>
-	<h2>In Situ</h2><br/>
-	<table class="table table-striped" id="sortableDomesticware">
-		<thead>
-	   		<tr>
-	     		<th>ID</th>
-	     		<th>Image</th>
-				<th></th>
-	   		</tr>
-	 	</thead>
-	 	<tbody>
-	   		<% @insitus.each do |is| %>
-				<tr data-item-id=<%= "#{is.id}" %> class="item">
-	    		<tr>
-					<td width="10%"><%= is.id %></td>
-					<td class="thumbTiny" width="10%"><%= image_tag(is.image) %></td>
-					<td width="80%">
-						<%= link_to 'Edit', edit_insitu_path(is), class: "btn btn-success" %>
-						<%= link_to 'Delete', is, method: :delete, data: {confirm: "Are you sure you want to delete this record?"}, class: "btn btn-success" %>
+					<td width="7%"><%= dw.row_order_position %></td>
+					<td class="thumbTiny" width="7%"><%= image_tag(dw.image, class: "thumb") %></td>
+					<td width="38%"><%= dw.description1 %></td>
+					<td width="38%"><%= dw.description2 %></td>
+					<td width="10%">
+						<%= link_to 'Edit', edit_domesticware_path(dw) %>
+						<%= link_to 'Delete', dw, method: :delete, data: {confirm: "Are you sure you want to delete this record?"} %>
 					</td>
 	     		</tr>
 	   		<% end %>

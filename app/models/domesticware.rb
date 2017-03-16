@@ -1,5 +1,8 @@
 class Domesticware < ActiveRecord::Base
   
+  include RankedModel
+  ranks :row_order
+  
   if Rails.env.development?
       has_attached_file :image, IMAGE_PAPERCLIP_STORAGE_OPTS
     else
