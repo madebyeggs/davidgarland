@@ -30,3 +30,7 @@
 	  background-size: cover;
 	}
 }
+
+@media (max-width:320px) {
+	.widthConstrain {font-size:18px;}
+}
