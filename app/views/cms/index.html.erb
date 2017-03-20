@@ -1,6 +1,6 @@
 <div class="col-md-12">
 	<h2>Domestic Ware</h2><br/>
-	<table class="table table-bordered table-striped" id="sortable">
+	<table class="table table-bordered table-striped">
 		<thead>
 	   		<tr>
 	     		<th>ID</th>
@@ -14,13 +14,63 @@
 	   		<% @domesticwares.each do |dw| %>
 				<tr data-item-id=<%= "#{dw.id}" %> class="item">
 	    		<tr>
-					<td width="7%"><%= dw.row_order_position %></td>
+					<td width="7%"><%= dw.id %></td>
 					<td class="thumbTiny" width="7%"><%= image_tag(dw.image, class: "thumb") %></td>
 					<td width="38%"><%= dw.description1 %></td>
 					<td width="38%"><%= dw.description2 %></td>
 					<td width="10%">
 						<%= link_to 'Edit', edit_domesticware_path(dw) %>
 						<%= link_to 'Delete', dw, method: :delete, data: {confirm: "Are you sure you want to delete this record?"} %>
+					</td>
+	     		</tr>
+	   		<% end %>
+	 	</tbody>
+	</table>
+	<h2>Studio Ceramics</h2><br/>
+	<table class="table table-bordered table-striped">
+		<thead>
+	   		<tr>
+	     		<th>ID</th>
+	     		<th>Image</th>
+	     		<th>Description</th>
+				<th>Dimensions</th>
+				<th></th>
+	   		</tr>
+	 	</thead>
+	 	<tbody>
+	   		<% @studioceramics.each do |sc| %>
+				<tr data-item-id=<%= "#{sc.id}" %> class="item">
+	    		<tr>
+					<td width="7%"><%= sc.id %></td>
+					<td class="thumbTiny" width="7%"><%= image_tag(sc.image, class: "thumb") %></td>
+					<td width="38%"><%= sc.description1 %></td>
+					<td width="38%"><%= sc.description2 %></td>
+					<td width="10%">
+						<%= link_to 'Edit', edit_studioceramic_path(sc) %>
+						<%= link_to 'Delete', sc, method: :delete, data: {confirm: "Are you sure you want to delete this record?"} %>
+					</td>
+	     		</tr>
+	   		<% end %>
+	 	</tbody>
+	</table>
+	<h2>In Situ</h2><br/>
+	<table class="table table-bordered table-striped">
+		<thead>
+	   		<tr>
+	     		<th>ID</th>
+	     		<th>Image</th>
+				<th></th>
+	   		</tr>
+	 	</thead>
+	 	<tbody>
+	   		<% @insitus.each do |is| %>
+				<tr data-item-id=<%= "#{is.id}" %> class="item">
+	    		<tr>
+					<td width="7%"><%= is.id %></td>
+					<td class="thumbTiny" width="7%"><%= image_tag(is.image, class: "thumb") %></td>
+					<td width="10%">
+						<%= link_to 'Edit', edit_insitu_path(is) %>
+						<%= link_to 'Delete', is, method: :delete, data: {confirm: "Are you sure you want to delete this record?"} %>
 					</td>
 	     		</tr>
 	   		<% end %>
