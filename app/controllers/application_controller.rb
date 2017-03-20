@@ -4,9 +4,9 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   
   def define_models
-    @domesticwares = Domesticware.rank(:row_order).all
-    @domesticwaresdisplay = Domesticware.rank(:row_order).all
-    @domesticware = Domesticware.rank(:row_order).first
+    @domesticwares = Domesticware.all
+    @domesticwaresdisplay = Domesticware.order("id ASC")
+    @domesticware = Domesticware.first
     @studioceramics = Studioceramic.all
     @studioceramicsdisplay = Studioceramic.order("id ASC")
     @studioceramic = Studioceramic.first
